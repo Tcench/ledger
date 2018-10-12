@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "04b8c232-d1da-404c-baec-833b97aa203c",
+		"name": "ledger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "supplier search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/supplier/list?pageSize=2&linkman=r",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"supplier",
+						"list"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "2"
+						},
+						{
+							"key": "linkman",
+							"value": "r"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supplier add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"linkman\":\"xxxxxxxxx\",\"shopName\":\"xxxxxxx\",\"username\":\"xxxxx\",\"mobilePhone\":\"1232132131\",\"telephone\":\"24234242\",\"address\":\"xxxxxxxx\"}"
+				},
+				"url": {
+					"raw": "localhost:9000/supplier/add",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"supplier",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
