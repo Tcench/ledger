@@ -19,7 +19,7 @@ public class SupplierController {
     private SupplierService supplierService;
 
     @GetMapping("/list")
-    public List<Supplier> list(@RequestParam SupplierQuery supplierQuery) {
+    public List<Supplier> list(SupplierQuery supplierQuery) {
         // System.out.println("pageSize: "+supplierQuery.getPageSize());
         return supplierService.findList(supplierQuery);
     }
