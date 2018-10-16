@@ -12,4 +12,5 @@ public interface SupplierService {
 
     int add(Supplier supplier);
 
+    Supplier getById(Integer id);
 }

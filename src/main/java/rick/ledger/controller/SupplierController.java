@@ -27,10 +27,19 @@ public class SupplierController {
     @PostMapping("/add")
     public R add(@RequestBody Supplier supplier) {
         int r = supplierService.add(supplier);
-        System.out.println("存储结果: " + r);
-        Map<String,Object> result = new HashMap<>();
-        result.put("supplier",supplier);
+        //System.out.println("存储结果: " + r);
+        Map<String, Object> result = new HashMap<>();
+        result.put("supplier", supplier);
 
         return R.ok(result);
     }
+
+    @GetMapping("/get")
+    public R get(Integer id) {
+        Supplier supplier = supplierService.getById(id);
+        Map<String, Object> result = new HashMap<>();
+        result.put("supplier", supplier);
+        return R.ok(result);
+    }
+
 }

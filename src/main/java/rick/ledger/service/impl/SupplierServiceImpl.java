@@ -25,4 +25,9 @@ public class SupplierServiceImpl implements SupplierService {
     public int add(Supplier supplier) {
         return supplierDAO.insertSelective(supplier);
     }
+
+    @Override
+    public Supplier getById(Integer id) {
+        return supplierDAO.selectByPrimaryKey(id);
+    }
 }
